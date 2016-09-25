@@ -16,11 +16,11 @@ import junitparams.Parameters;
 public class LawnParserTest {
 
 	private LawnParser 	parser;
-	private	Lawn 		actualLawn;
-	private	Lawn 		expectedLawn;
-	private Cell 		expectedCell;
-	private Cell 		actualCell;
-	private Position 	expectedPosition;
+	private	Lawn actualLawn;
+	private	Lawn expectedLawn;
+	private Cell expectedCell;
+	private Cell actualCell;
+	private Position expectedPosition;
 	
 
 	@Test

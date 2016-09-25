@@ -17,10 +17,10 @@ import junitparams.Parameters;
 @RunWith(JUnitParamsRunner.class)
 public class MowerParserTest {
 	
-	private static	MowerParser	parser;
-	private static 	Lawn		lawn;
-	private Mower 		actualMower;
-	private Position 	expectedPosition;
+	private static MowerParser parser;
+	private static Lawn	lawn;
+	private Mower actualMower;
+	private Position expectedPosition;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

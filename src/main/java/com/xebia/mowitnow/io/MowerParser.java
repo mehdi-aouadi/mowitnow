@@ -17,8 +17,8 @@ import com.xebia.mowitnow.mower.Mower;
  */
 public class MowerParser implements Parser<String, Mower> {
 
-	private static final String SEPARATOR 	= " ";
-	private static final String PATTERN 	= "^\\d+ \\d+ [N|E|W|S]$";
+	private static final String SEPARATOR = " ";
+	private static final String PATTERN = "^\\d+ \\d+ [N|E|W|S]$";
 
 	private final Lawn lawn;
 	

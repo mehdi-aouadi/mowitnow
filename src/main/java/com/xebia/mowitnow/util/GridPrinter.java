@@ -18,8 +18,8 @@ import com.xebia.mowitnow.mower.Mower;
  */
 public final class GridPrinter {
 	
-	private static final String HORIZONTAL_SEPARATOR	= "-";
-	private static final String VERTICAL_SEPARATOR		= "|";
+	private static final String HORIZONTAL_SEPARATOR = "-";
+	private static final String VERTICAL_SEPARATOR = "|";
 	
 	/**
 	 * Returns a String that represents the Lawn state

@@ -14,8 +14,8 @@ import com.xebia.mowitnow.base.Lawn;
  */
 public class LawnParser implements Parser<String, Lawn> {
 	
-	private static final String SEPARATOR 	= " ";
-	private static final String PATTERN 	= "^\\d+\\s\\d+$";
+	private static final String SEPARATOR = " ";
+	private static final String PATTERN = "^\\d+\\s\\d+$";
 
 	@Override
 	public Lawn parse(String source) {

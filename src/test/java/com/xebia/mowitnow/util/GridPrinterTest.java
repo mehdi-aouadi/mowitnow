@@ -21,9 +21,9 @@ import junitparams.Parameters;
 @RunWith(JUnitParamsRunner.class)
 public class GridPrinterTest {
 
-	private static Lawn 		lawn;
-	private static int			id = 1;
-	private static List<Mower> 	mowers;
+	private static Lawn lawn;
+	private static int id = 1;
+	private static List<Mower> mowers;
 	
 	private static Logger logger = LoggerFactory.getLogger(GridPrinterTest.class);
 	

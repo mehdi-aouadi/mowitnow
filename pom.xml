@@ -1,102 +1,102 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.xebia.mowitnow</groupId>
-  <artifactId>project-mowitnow</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
-  <name>Mow It Now</name>
-  <description>Technical Interview at Xebia</description>
-  <url>https://github.com/mehdi-aouadi</url>
-  <organization>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.xebia.mowitnow</groupId>
+	<artifactId>project-mowitnow</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>Mow It Now</name>
+	<description>Xebia technical test project</description>
+	<url>https://github.com/mehdi-aouadi</url>
+	<organization>
 		<name>Xebia</name>
 		<url>http://www.xebia.fr</url>
-  </organization>
-  <developers>
-  	<developer>
-		<id>mehdi-aouadi</id>
-		<name>Mehdi AOUADI</name>
-		<email>mehdi.aouadi@gmail.com</email>
-		<roles>
-			<role>Super Developer</role>
-		</roles>
-	</developer>
-  </developers>
+	</organization>
+	<developers>
+		<developer>
+			<id>mehdi-aouadi</id>
+			<name>Mehdi AOUADI</name>
+			<email>mehdi.aouadi@gmail.com</email>
+			<roles>
+				<role>Super Developer</role>
+			</roles>
+		</developer>
+	</developers>
 
-  <properties>
-  	<!-- Dependencies version -->
-  	<java.version>1.8</java.version>
-  	<guava.version>19.0</guava.version>
-  	<mockito.version>1.9.5</mockito.version>
-  	<junitparams.version>1.0.2</junitparams.version>
-  	<logback.version>1.1.7</logback.version>
-  	
-  	<!-- Plugins version -->
-  	<maven.site.version>3.4</maven.site.version>
-  	<maven.checkstyle.plugin>2.7</maven.checkstyle.plugin>
-  	<maven.javadoc.plugin>2.10.3</maven.javadoc.plugin>
-  	<maven.surefire.plugin>2.19.1</maven.surefire.plugin>
-  	<maven.project.info.reports.plugin>2.9</maven.project.info.reports.plugin>
-  	<maven.jxr.plugin>2.3</maven.jxr.plugin>
-  	<maven.cobertura.plugin>2.7</maven.cobertura.plugin>
-  	<maven.pmd.plugin>3.6</maven.pmd.plugin>
-  	<maven.versions.plugin>1.3.1</maven.versions.plugin>
-  	<maven.taglist.plugin>2.4</maven.taglist.plugin>
-  	<maven.doxia.module.markdown.version>1.5</maven.doxia.module.markdown.version>
-  	<maven.github.plugin>0.9</maven.github.plugin>
-  	<maven.shade.version>2.2</maven.shade.version>
-  	<maven.surefire.version>2.17</maven.surefire.version>
-  	<maven.compiler.version>3.1</maven.compiler.version>
-  	<maven.findbugs.plugin>3.0.4</maven.findbugs.plugin>
-  	
-  	<!-- Project configuration -->
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputDirectory>${project.build.directory}/report</project.reporting.outputDirectory>
-    
-  </properties>
+	<properties>
+		<!-- Dependencies version -->
+		<java.version>1.8</java.version>
+		<guava.version>19.0</guava.version>
+		<mockito.version>1.9.5</mockito.version>
+		<junitparams.version>1.0.2</junitparams.version>
+		<logback.version>1.1.7</logback.version>
 
-  <dependencies>
-    <dependency>
-    	<groupId>com.google.guava</groupId>
-    	<artifactId>guava</artifactId>
-    	<version>${guava.version}</version>
-    </dependency>
-    <dependency>
-    	<groupId>org.slf4j</groupId>
-    	<artifactId>slf4j-api</artifactId>
-    	<version>1.7.21</version>
-    </dependency>
-    <dependency>
-    	<groupId>org.mockito</groupId>
-    	<artifactId>mockito-all</artifactId>
-    	<version>${mockito.version}</version>
-    	<scope>test</scope>
-    </dependency>
-    <dependency>
-    	<groupId>junit</groupId>
-    	<artifactId>junit</artifactId>
-    	<version>4.8.2</version>
-    	<scope>test</scope>
-    </dependency>
-    <dependency>
-    	<groupId>pl.pragmatists</groupId>
-    	<artifactId>JUnitParams</artifactId>
-    	<version>${junitparams.version}</version>
-    	<scope>test</scope>
-    </dependency>
-    <dependency>
-    	<groupId>ch.qos.logback</groupId>
-    	<artifactId>logback-classic</artifactId>
-    	<version>${logback.version}</version>
-    </dependency>
-  </dependencies>
-  
-  
-  <build>
-  	<finalName>${project.artifactId}</finalName>	
-  	<plugins>
-  	
-  			<plugin>
+		<!-- Plugins version -->
+		<maven.site.version>3.4</maven.site.version>
+		<maven.checkstyle.plugin>2.7</maven.checkstyle.plugin>
+		<maven.javadoc.plugin>2.10.3</maven.javadoc.plugin>
+		<maven.surefire.plugin>2.19.1</maven.surefire.plugin>
+		<maven.project.info.reports.plugin>2.9</maven.project.info.reports.plugin>
+		<maven.jxr.plugin>2.3</maven.jxr.plugin>
+		<maven.cobertura.plugin>2.7</maven.cobertura.plugin>
+		<maven.pmd.plugin>3.6</maven.pmd.plugin>
+		<maven.versions.plugin>1.3.1</maven.versions.plugin>
+		<maven.taglist.plugin>2.4</maven.taglist.plugin>
+		<maven.doxia.module.markdown.version>1.5</maven.doxia.module.markdown.version>
+		<maven.github.plugin>0.9</maven.github.plugin>
+		<maven.shade.version>2.2</maven.shade.version>
+		<maven.surefire.version>2.17</maven.surefire.version>
+		<maven.compiler.version>3.1</maven.compiler.version>
+		<maven.findbugs.plugin>3.0.4</maven.findbugs.plugin>
+
+		<!-- Project configuration -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputDirectory>${project.build.directory}/report</project.reporting.outputDirectory>
+
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.21</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>${mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>pl.pragmatists</groupId>
+			<artifactId>JUnitParams</artifactId>
+			<version>${junitparams.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+	</dependencies>
+
+
+	<build>
+		<finalName>${project.artifactId}</finalName>
+		<plugins>
+
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
 				<configuration>
@@ -132,8 +132,8 @@
 				</configuration>
 				<version>${maven.compiler.version}</version>
 			</plugin>
-  				
-  			<!-- Reporting -->
+
+			<!-- Reporting -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
@@ -190,28 +190,28 @@
 								</instrumentation>
 							</configuration>
 						</plugin>
-									<plugin>
-		      	<groupId>org.apache.maven.plugins</groupId>
-			      <artifactId>maven-pmd-plugin</artifactId>
-			      <version>${maven.pmd.plugin}</version>
-			      <configuration>
-			        <aggregate>true</aggregate>
-			        <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
-			        <!-- The minimum tokens before a violation -->
-			        <minimumTokens>100</minimumTokens>
-			        <!-- Turn off if no xref report -->
-			        <linkXRef>true</linkXRef>
-			        <verbose>true</verbose>
-			        <targetJdk>${java.version}</targetJdk>
-			        <rulesets>
-			          <ruleset>/rulesets/maven.xml</ruleset>
-			          <ruleset>/rulesets/java/migrating_to_junit4.xml</ruleset>
-			          <ruleset>/rulesets/java/design.xml</ruleset>
-			          <ruleset>/rulesets/java/unusedcode.xml</ruleset>
-			          <ruleset>/rulesets/java/typeresolution.xml</ruleset>
-			        </rulesets>
-			      </configuration>
-			    </plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-pmd-plugin</artifactId>
+							<version>${maven.pmd.plugin}</version>
+							<configuration>
+								<aggregate>true</aggregate>
+								<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+								<!-- The minimum tokens before a violation -->
+								<minimumTokens>100</minimumTokens>
+								<!-- Turn off if no xref report -->
+								<linkXRef>true</linkXRef>
+								<verbose>true</verbose>
+								<targetJdk>${java.version}</targetJdk>
+								<rulesets>
+									<ruleset>/rulesets/maven.xml</ruleset>
+									<ruleset>/rulesets/java/migrating_to_junit4.xml</ruleset>
+									<ruleset>/rulesets/java/design.xml</ruleset>
+									<ruleset>/rulesets/java/unusedcode.xml</ruleset>
+									<ruleset>/rulesets/java/typeresolution.xml</ruleset>
+								</rulesets>
+							</configuration>
+						</plugin>
 						<plugin>
 							<groupId>org.codehaus.mojo</groupId>
 							<artifactId>findbugs-maven-plugin</artifactId>
@@ -243,7 +243,7 @@
 				<configuration>
 					<message>Creating site for ${project.version}</message>
 				</configuration>
-			</plugin>  		
-  	</plugins>
-  </build>
+			</plugin>
+		</plugins>
+	</build>
 </project>
