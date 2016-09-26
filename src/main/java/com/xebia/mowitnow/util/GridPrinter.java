@@ -30,9 +30,9 @@ public final class GridPrinter {
 	 */
 	public static String draw(final Lawn lawn, final Mower... mowers) {
 		
-		int 			width 				= lawn.getWidth();
-		int 			height 				= lawn.getHeight();
-		boolean 		containsMowers 		= mowers.length > 0;
+		int width = lawn.getWidth();
+		int height = lawn.getHeight();
+		boolean containsMowers = mowers.length > 0;
 		
 		//The number of digits of Y in order to add spaces
 		int yMaxDigitsNumber = String.valueOf(height-1).length();

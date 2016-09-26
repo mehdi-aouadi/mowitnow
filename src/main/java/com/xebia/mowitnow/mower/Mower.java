@@ -1,13 +1,16 @@
 package com.xebia.mowitnow.mower;
 
-import com.xebia.mowitnow.base.*;
-
 import java.util.Objects;
 import java.util.Observable;
 import java.util.Queue;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.xebia.mowitnow.base.Cell;
+import com.xebia.mowitnow.base.Move;
+import com.xebia.mowitnow.base.Orientation;
+import com.xebia.mowitnow.base.Position;
 
 
 /**
@@ -50,8 +53,8 @@ public class Mower extends Observable{
 	public Mower(int id, Cell cell, Orientation orientation) {
 		super();
 		this.id = id;
-		this.setOrientation(orientation);
-		this.setCell(cell);
+		this.orientation = orientation;
+		this.cell = cell;
 		
 		//The initial position of the mower is locked
 		this.cell.lock();
@@ -67,8 +70,8 @@ public class Mower extends Observable{
 	public Mower(Cell cell, Orientation orientation) {
 		super();
 		this.id = 0;
-		this.setOrientation	(orientation);
-		this.setCell(cell);
+		this.orientation = orientation;
+		this.cell = cell;
 		
 		//The initial position of the mower is locked
 		this.cell.lock();	
@@ -227,7 +230,7 @@ public class Mower extends Observable{
 		 if (moves != null && !moves.isEmpty()) {
 		      while (!moves.isEmpty()) {
 		    	  Move move = moves.poll();
-		    	  logger.debug("Performing the insctruction N° {} {} .", (index++) ,move);
+		    	  logger.debug("Performing the insctruction N° {} {} .", index++, move);
 		    	  move.move(this);		    	  
 		      }
 		    } else {
@@ -246,7 +249,7 @@ public class Mower extends Observable{
 
 	@Override
 	public boolean equals(Object obj) {
-		if((obj == null) || (getClass() != obj.getClass())) {
+		if(obj == null || getClass() != obj.getClass()) {
 	        return false;
 		}
 		
@@ -257,6 +260,14 @@ public class Mower extends Observable{
 				&&Objects.equals(this.getOrientation(), objMower.getOrientation())
 				?true:false;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(this.id, this.cell, this.orientation);
+	}
+	
+	
+	
 	
 	
 }

@@ -38,7 +38,7 @@ public class Commander implements Observer{
 	 */
 	public Commander(Lawn lawn, List<Mower> mowers) {
 		this.lawn = lawn;
-		this.setMowers(mowers);
+		this.mowers = mowers;
 		logger.debug("Mowers set. Here is the inital state of the lawn : \n {}",GridPrinter.draw(lawn, mowers.toArray(new Mower[] {})));
 	}	
 	

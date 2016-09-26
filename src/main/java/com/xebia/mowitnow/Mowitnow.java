@@ -2,8 +2,9 @@ package com.xebia.mowitnow;
 
 import java.io.File;
 
-import com.xebia.mowitnow.io.*;
-import com.xebia.mowitnow.mower.*;
+import com.xebia.mowitnow.io.Loader;
+import com.xebia.mowitnow.mower.Commander;
+import com.xebia.mowitnow.mower.Mower;
 
 /**
  * Mowitnow application

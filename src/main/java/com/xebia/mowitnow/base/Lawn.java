@@ -39,9 +39,9 @@ public class Lawn {
 	public Lawn(int width, int heitgh) {
 		super();
 		checkArgument(width > 0 && heitgh > 0, "Width and Height of the Lawn must be > 0");
-		this.width 	= width;
+		this.width = width;
 		this.height = heitgh;
-		this.grid 	= new Cell[this.width][this.height];
+		this.grid = new Cell[this.width][this.height];
 		
 		for(int x=0; x<this.width; x++)	{
 			for(int y=0; y<this.height; y++) {
@@ -71,7 +71,7 @@ public class Lawn {
  			}			
 		}
 		
-		logger.debug("A lawn has been initialized : North limit is {} and East limit is {} ", this.getHeight(), this.getWidth());
+		logger.debug("A lawn has been initialized : North limit is {} and East limit is {} ", this.height, this.width);
 	}
 	
 
@@ -120,7 +120,7 @@ public class Lawn {
 	
 	@Override
 	public boolean equals(Object obj) {
-		if((obj == null) || (getClass() != obj.getClass())) {
+		if(obj == null || getClass() != obj.getClass()) {
 	        return false;
 		}
 		
