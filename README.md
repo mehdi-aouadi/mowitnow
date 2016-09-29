@@ -1,15 +1,43 @@
 # MowItNow  
-## Documentation  
+
+This Java application is a solution to Xebia technical test project.
+
+## Project description  
+
+The MowItNow enterprise decided to develop an automatic Lawn Mower for rectanglar surfaces.  
+
+The mower can run through the entire surface.  
+The mower position is an ```X:Y``` combination and a letter that indicates its orientation ``(N|E|S|W)``. For example ```0, 5, N```  
+The Law is represented by a grid.  
+The mower receives insctructions as letters : ```A``` to go forward, ```D``` to turn right and ```G``` to turn Left (Actually these are the first letters of the orresponding french words).
+
+If the Mower position after running an instruction in out of the Lawn the Mower keeps its position and doesn't move.  
+The application reads an input file formatted as the following :  
+* The first line contains the the right upper Lawn cell coordinates ```X:Y```. Example : ```5 5```
+* The following lines contains the mowers positions and their instructions :
+	* The first line contains the Mower position ```X:Y``` and its orientation ```(N|E|S|W)```. Example : ```1 2 N```
+	* The second line contains a set of instructions ```(A|D|G)```. Example : ```GAGAGAGAA```
+	
+The mowers moves sequentially. That means that the second Mower start moving when the one before finishes executing its intructions.  
+When a Mower finishes executing its instructions it provides its final position and orientation.
+
+The goal is to create a Java application that runs on a JVM ≥ 7 and implements the described behaviour.
+
+## Documentation
+
 The documentation is available in the [project site].  
 Many reports are generated using the maven-site-plugin.
-## Running the application
+
+## Compiling and Running the application
+
 The executable jar can be generated using Maven :  
 Move to the project directory ```com.xebia.mowitnow``` and run
 ```maven clean install```.  
 A jar file ```project-mowitnow-0.0.1-SNAPSHOT-exec.jar``` will be generated in ```/target``` subdirectory.  
 Move to ```target``` and run :  
-```java -cp project-mowitnow-0.0.1-SNAPSHOT-exec.jar com.xebia.mowitnow.Mowitnow.main "YourInputFilePath"```  
-Put the input file path instead of YourInputFilePath.  
+```java -cp project-mowitnow-0.0.1-SNAPSHOT-exec.jar com.xebia.mowitnow.Mowitnow "YourInputFilePath"```  
+Put the input file path instead of YourInputFilePath (For example ```"D:\\data.txt"```).  
+
 Input file example :  
 ```
 5 5

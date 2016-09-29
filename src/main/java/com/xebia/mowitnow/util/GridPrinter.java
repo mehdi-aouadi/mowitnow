@@ -28,7 +28,7 @@ public final class GridPrinter {
 	 * @param mowers
 	 * @return
 	 */
-	public static String draw(final Lawn lawn, final Mower... mowers) {
+	public static String draw(Lawn lawn, Mower... mowers) {
 		
 		int width = lawn.getWidth();
 		int height = lawn.getHeight();
@@ -134,7 +134,7 @@ public final class GridPrinter {
 	 * @param mowers
 	 * @return
 	 */
-	private static char getMowerOrientation(final Position position, final Mower... mowers) {
+	private static char getMowerOrientation(Position position, Mower... mowers) {
 		Predicate<Mower> predicate = new Predicate<Mower>() {
 			@Override
 			public boolean apply(Mower input) {

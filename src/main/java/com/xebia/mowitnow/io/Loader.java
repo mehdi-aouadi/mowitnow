@@ -36,8 +36,7 @@ public class Loader {
 	    try {
 			return fromLines(Files.readLines(file, Charsets.UTF_8));
 		} catch (IOException e) {
-			e.printStackTrace();
-			logger.error("Cannot open the specified file at path : "+file.getAbsolutePath());
+			logger.error("Cannot open the specified file at path : {} \n {}", file.getAbsolutePath(), e.toString());
 			return null;
 		}
 	  }
