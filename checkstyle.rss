@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rss version="0.91">
+  <channel>
+    <title>Mow It Now - Checkstyle report</title>
+    <link>https://github.com/mehdi-aouadi</link>
+    <description>Mow It Now - Checkstyle report</description>
+    <language>en-us</language>
+    <copyright>&#169;2016 Xebia</copyright>
+    <item>
+      <title>File: 14,
+             Errors: 1487,
+             Warnings: 0,
+             Infos: 0
+      </title>
+            <link>https://github.com/mehdi-aouadi/checkstyle.html</link>
+      <description>
+        <p>Click <a href="https://github.com/mehdi-aouadi/checkstyle.html">here</a> for the full Checkstyle report.</p>
+
+        <table summary="Files" boder="1">
+          <thead>
+            <tr>
+              <th>Files</th>
+              <th style="width:30px;"><abbr title="Info">I</abbr></th>
+              <th style="width:30px;"><abbr title="Warning">W</abbr></th>
+              <th style="width:30px;"><abbr title="Error">E</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.base.Move.java">com/xebia/mowitnow/base/Move.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  46
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.base.Orientation.java">com/xebia/mowitnow/base/Orientation.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  11
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.mower.Mower.java">com/xebia/mowitnow/mower/Mower.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  374
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.io.Parser.java">com/xebia/mowitnow/io/Parser.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  12
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.io.MowerParser.java">com/xebia/mowitnow/io/MowerParser.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  40
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.Mowitnow.java">com/xebia/mowitnow/Mowitnow.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  22
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.util.GridPrinter.java">com/xebia/mowitnow/util/GridPrinter.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  270
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.base.Position.java">com/xebia/mowitnow/base/Position.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  90
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.io.Loader.java">com/xebia/mowitnow/io/Loader.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  40
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.io.InstructionsParser.java">com/xebia/mowitnow/io/InstructionsParser.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  31
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.base.Cell.java">com/xebia/mowitnow/base/Cell.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  182
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.base.Lawn.java">com/xebia/mowitnow/base/Lawn.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  234
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.mower.Commander.java">com/xebia/mowitnow/mower/Commander.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  105
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.io.LawnParser.java">com/xebia/mowitnow/io/LawnParser.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  30
+                </td>
+              </tr>
+                      </tbody>
+        </table>
+        
+      </description>
+    </item>
+  </channel>
+</rss>
+
