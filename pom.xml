@@ -185,9 +185,7 @@
 							<configuration>
 								<aggregate>true</aggregate>
 								<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
-								<!-- The minimum tokens before a violation -->
 								<minimumTokens>100</minimumTokens>
-								<!-- Turn off if no xref report -->
 								<linkXRef>true</linkXRef>
 								<verbose>true</verbose>
 								<targetJdk>${java.version}</targetJdk>

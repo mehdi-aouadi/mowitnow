@@ -10,8 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Charsets;
-import com.google.common.base.Preconditions;
-import com.google.common.base.Splitter;
+import static com.google.common.base.Preconditions.checkArgument;
 import com.google.common.collect.Lists;
 import com.google.common.io.Files;
 import com.xebia.mowitnow.base.Lawn;
@@ -28,8 +27,6 @@ import com.xebia.mowitnow.mower.Mower;
 
 public class Loader {
 	
-	private static final String LINE_SEPRATOR = "\n";
-	
 	private static Logger logger = LoggerFactory.getLogger(Loader.class);
 
 	  public Commander fromFile(File file) {
@@ -41,13 +38,9 @@ public class Loader {
 		}
 	  }
 
-	  public Commander fromText(String text) {
-	    return fromLines(Splitter.on(LINE_SEPRATOR).omitEmptyStrings().splitToList(text));
-	  }
-
 	  public Commander fromLines(List<String> pLines) {
-	    Preconditions.checkArgument(pLines.size() > 2,
-	        "Error when loading the Commander: Missing informations in the file");
+		  checkArgument(pLines.size() > 2,
+	        "Error when loading the Commander: Missing informations in the file. Expecting at least 3 lines.");
 	    Iterator<String> lines = pLines.iterator();
 	    LawnParser lawnParser = new LawnParser();
 	    InstructionsParser instructionParser = new InstructionsParser();

@@ -31,7 +31,7 @@ public class MowerParser implements Parser<String, Mower> {
 	@Override
 	public Mower parse(String source) {
 		checkArgument(source.matches(PATTERN),
-		        "Error when parsing the mower infos [Expecting: 'x y Orientaion'; Actual: '"
+		        "Error when parsing the mower infos [Expecting: Positive integer 'X Y' and 'Orientaion'; Got: '"
 		            + source + "']");
 		    List<String> fields = Splitter.on(SEPARATOR).splitToList(source);
 		    int x = Integer.valueOf(fields.get(0));
