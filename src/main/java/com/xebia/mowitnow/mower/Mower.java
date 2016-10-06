@@ -81,23 +81,21 @@ public class Mower extends Observable{
 	}
 	
 	/**
-	 * Return the mower Cell
-	 * @return
+	 * @return the mower's Identifier
 	 */
 	public int getId() {
 		return this.id;
 	}
 
 	/**
-	 * Return the mower Cell
-	 * @return
+	 * @return the mower's Cell
 	 */
 	public Cell getCell() {
 		return this.cell;
 	}
 	
 	/**
-	 * Set the mower Cell
+	 * Set the mower's Cell
 	 * @param cell
 	 */
 	public void setCell(Cell cell) {
@@ -105,15 +103,14 @@ public class Mower extends Observable{
 	}
 	
 	/**
-	 * Returns the mower orientation
-	 * @return
+	 * @return the mower's orientation
 	 */
 	public Orientation getOrientation() {
 		return orientation;
 	}
 	
 	/**
-	 * Set the mower orientation
+	 * Set the mower's orientation
 	 * @param orientation
 	 */
 	public void setOrientation(Orientation orientation) {
@@ -121,8 +118,7 @@ public class Mower extends Observable{
 	}	
 	
 	/**
-	 * Returns the mower's instructions queue
-	 * @return
+	 * @return the mower's instructions queue
 	 */
 	public Queue<Move> getMoves() {
 		return moves;
