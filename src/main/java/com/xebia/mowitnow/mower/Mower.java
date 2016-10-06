@@ -7,6 +7,8 @@ import java.util.Queue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static com.google.common.base.Preconditions.checkArgument;
+
 import com.xebia.mowitnow.base.Cell;
 import com.xebia.mowitnow.base.Move;
 import com.xebia.mowitnow.base.Orientation;
@@ -21,7 +23,6 @@ import com.xebia.mowitnow.base.Position;
  *
  */
 
-// @TODO : Check if the cell is locked before creating the Mower -> Throw Exception
 public class Mower extends Observable{
 	
 	private static Logger logger = LoggerFactory.getLogger(Mower.class);
@@ -52,6 +53,7 @@ public class Mower extends Observable{
 	 */
 	public Mower(int id, Cell cell, Orientation orientation) {
 		super();
+		checkArgument(!cell.isLocked(), "Error when creating a new Mower at positon X:"+cell.getPosition().getX()+" Y:"+cell.getPosition().getY()+". This cell already contains a mower");
 		this.id = id;
 		this.orientation = orientation;
 		this.cell = cell;
@@ -69,12 +71,13 @@ public class Mower extends Observable{
 	 */
 	public Mower(Cell cell, Orientation orientation) {
 		super();
+		checkArgument(!cell.isLocked(), "Error when creating a new Mower at positon X:"+cell.getPosition().getX()+" Y:"+cell.getPosition().getY()+". This cell already contains a mower");
 		this.id = 0;
 		this.orientation = orientation;
 		this.cell = cell;
 		
 		//The initial position of the mower is locked
-		this.cell.lock();	
+		this.cell.lock();
 	}
 	
 	/**

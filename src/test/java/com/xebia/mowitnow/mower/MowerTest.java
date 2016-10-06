@@ -20,7 +20,6 @@ import com.xebia.mowitnow.base.Cell;
 import com.xebia.mowitnow.base.Lawn;
 import com.xebia.mowitnow.base.Move;
 import com.xebia.mowitnow.base.Orientation;
-import com.xebia.mowitnow.base.Position;
 import com.xebia.mowitnow.mower.MowerTest.Data.DataBuilder;
 import com.xebia.mowitnow.util.GridPrinter;
 
@@ -28,33 +27,54 @@ import com.xebia.mowitnow.util.GridPrinter;
 public class MowerTest {
 
 	public static Lawn lawn;
-	public Cell cell;
 	public Orientation orientation;
 	public Mower mower;
 
 	private static Logger logger = LoggerFactory.getLogger(MowerTest.class);
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 		lawn = new Lawn(5, 5);
-		cell = new Cell(new Position(3, 3));
 		orientation = Orientation.N;
 	}
 	
 	@Test
 	@Parameters({ "N", "E", "S", "W" })
 	public void mowerTurningRightTest(Orientation orientation) {
-		mower = new Mower(cell, orientation);
-		this.mower.setOrientation(orientation);
+		mower = new Mower(lawn.cellAt(3, 3), orientation);
 		checkTurningRight(mower);
 	}
 
 	@Test
 	@Parameters({ "N", "E", "S", "W" })
 	public void mowerTurningLeftTest(Orientation orientation) {
-		mower = new Mower(cell, orientation);
-		this.mower.setOrientation(orientation);
+		mower = new Mower(lawn.cellAt(3, 3), orientation);
 		checkTurningLeft(mower);
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void mowerInitialCellLockedTest() {
+		lawn.cellAt(3, 3).lock();
+		mower = new Mower(lawn.cellAt(3, 3), orientation);
+		checkTurningRight(mower);
+	}
+	
+	@Test
+	public void mowerNextCellLocked() {
+		lawn.cellAt(3, 3).nextCell(orientation).lock();
+		mower = new Mower(lawn.cellAt(3, 3), orientation);
+		mower.moveForward();
+		assertEquals(mower.getPosition(), lawn.cellAt(3, 3).getPosition());
+		assertEquals(mower.getOrientation(), orientation);
+	}
+	
+	@Test
+	@Parameters({"2,4,N", "4,2,E", "2,0,S", "0,2,W"})
+	public void mowerNextCellOutOfTheLawn(int x, int y, Orientation orientation) {
+		mower = new Mower(lawn.cellAt(x, y), orientation);
+		mower.moveForward();
+		assertEquals(mower.getPosition(), lawn.cellAt(x, y).getPosition());
+		assertEquals(mower.getOrientation(), orientation);
 	}
 
 	@Test
@@ -69,13 +89,13 @@ public class MowerTest {
 	public Object[][] parametersForStartTest() {
 		return new Object[][] { 
 			{ DataBuilder.lawn(2, 2).mower(0, 0, Orientation.E).expected(0, 0, Orientation.E) },
-				{ DataBuilder.lawn(1, 1).mower(0, 0, Orientation.E).todo(Move.D).expected(0, 0, Orientation.S) },
-				{ DataBuilder.lawn(1, 1).mower(0, 0, Orientation.E).todo(Move.G).expected(0, 0, Orientation.N) },
-				{ DataBuilder.lawn(2, 2).mower(0, 0, Orientation.W).todo(Move.G, Move.G, Move.G, Move.G).expected(0, 0,
-						Orientation.W) },
-				{ DataBuilder.lawn(5, 5).mower(2, 2, Orientation.W)
-						.todo(Move.D, Move.A, Move.A, Move.G, Move.A, Move.A, Move.G, Move.A, Move.G, Move.A)
-						.expected(1, 3, Orientation.E) } };
+			{ DataBuilder.lawn(1, 1).mower(0, 0, Orientation.E).todo(Move.D).expected(0, 0, Orientation.S) },
+			{ DataBuilder.lawn(1, 1).mower(0, 0, Orientation.E).todo(Move.G).expected(0, 0, Orientation.N) },
+			{ DataBuilder.lawn(2, 2).mower(0, 0, Orientation.W).todo(Move.G, Move.G, Move.G, Move.G).expected(0, 0,
+					Orientation.W) },
+			{ DataBuilder.lawn(5, 5).mower(2, 2, Orientation.W)
+					.todo(Move.D, Move.A, Move.A, Move.G, Move.A, Move.A, Move.G, Move.A, Move.G, Move.A)
+					.expected(1, 3, Orientation.E) } };
 	}
 	
 	private void checkTurningRight(Mower mower) {
