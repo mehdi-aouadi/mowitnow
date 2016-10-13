@@ -8,8 +8,8 @@
     <language>en-us</language>
     <copyright>&#169;2016 Xebia</copyright>
     <item>
-      <title>File: 14,
-             Errors: 1476,
+      <title>File: 16,
+             Errors: 1541,
              Warnings: 0,
              Infos: 0
       </title>
@@ -57,6 +57,20 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.web.Application.java">com/xebia/mowitnow/web/Application.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  6
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.mower.Mower.java">com/xebia/mowitnow/mower/Mower.java</a>
                 </td>
                 <td>
@@ -99,7 +113,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.Mowitnow.java">com/xebia/mowitnow/Mowitnow.java</a>
+                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.web.MowerController.java">com/xebia/mowitnow/web/MowerController.java</a>
                 </td>
                 <td>
                   0
@@ -108,7 +122,7 @@
                   0
                 </td>
                 <td>
-                  22
+                  57
                 </td>
               </tr>
                           <tr>
@@ -150,7 +164,21 @@
                   0
                 </td>
                 <td>
-                  40
+                  47
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/mehdi-aouadi/checkstyle.html#com.xebia.mowitnow.web.WebSocketConfig.java">com/xebia/mowitnow/web/WebSocketConfig.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  17
                 </td>
               </tr>
                           <tr>
