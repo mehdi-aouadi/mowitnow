@@ -29,16 +29,21 @@ The documentation is available in the [project site].
 Many reports are generated using the maven-site-plugin.
 
 ## Compiling and Running the application
+The application can be launched using Maven Spring Boot plugin :  
+Move to the project directory ```com.xebia.mowitnow``` and run  
+```spring-boot:run```.  The application will be available at ```http:\\localhost:8080```.  
 
-The executable jar can be generated using Maven :  
-Move to the project directory ```com.xebia.mowitnow``` and run
+Or an executable jar can be generated using Maven :  
+Move to the project directory ```com.xebia.mowitnow``` and run  
 ```maven clean install```.  
 A jar file ```project-mowitnow-0.0.1-SNAPSHOT-exec.jar``` will be generated in ```/target``` subdirectory.  
 Move to ```target``` and run :  
-```java -cp project-mowitnow-0.0.1-SNAPSHOT-exec.jar com.xebia.mowitnow.Mowitnow "YourInputFilePath"```  
-Put the input file path instead of YourInputFilePath (For example ```"D:\\data.txt"```).  
+```java -jar project-mowitnow-0.0.1-SNAPSHOT-exec.jar```  
+The application will be available at ```http:\\localhost:8080```  
 
-Input file example :  
+Tape your input commands in the text area or drop a file which contains the commands.  
+
+Input example :  
 ```
 5 5
 1 2 N
