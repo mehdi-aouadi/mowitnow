@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Demo Mow it now!</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" type="image/png" href="img/logo.png" />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/main.css">
+<!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/lib/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+</head>
+
+<body>
+	<header class="container">
+		<div class="row">
+			<h1 class="col-sm-9">MowItNow</h1>
+			<div class="col-sm-3 right">
+				<img src="img/logo.png" width="50" height="50">
+			</div>
+		</div>
+	</header>
+	<div class="jumbotron">
+		<div class="container">
+			<div class="row">
+				<form class="form-horizontal" accept-charset="UTF-8">
+					<div id="instructions-group" class="control-group">
+						<label class="control-label row" for="instructions">Instructions:</label>
+						<div class="row">
+							<textarea id="instructions" name="instructions" class="col-sm-12"
+								rows="5">5 5
+1 2 N
+GAGAGAGAA
+3 3 E
+AADAADADDA</textarea>
+						</div>
+					</div>
+					<div class="row">
+						<p class="text-info">You can drop a file in the text area</p>
+					</div>
+					<div class="row">
+						<span id="error-banner" class="alert-danger"></span>
+					</div>
+					<div class="control-group top-buffer">
+						<div class="controls">
+							<button id="start" type="submit"
+								class="btn btn-large btn-default" disabled="disabled">Connecting</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="row top-buffer">
+				<div id="canvas-container" class="col-xs-4"></div>
+			</div>
+			<div class="row top-buffer">
+				<div id="result"
+					class="alert-success"></div>
+			</div>
+		</div>
+	</div>
+	<footer class="container">
+		<div class="row">
+			<p class="col-sm-4">&copy; MowItNow 2016</p>
+		</div>
+	</footer>
+
+	<script src="js/lib/jquery-1.9.1.min.js"></script>
+	<script src="js/lib/jcanvas.min.js"></script>
+	<script src="js/lib/filedrop-min.js"></script>
+	<script src="js/lib/bootstrap.min.js"></script>
+	<script src="js/lib/sockjs-0.3.4.js"></script>
+	<script src="js/lib/stomp.js"></script>
+	<script src="js/mowitnow.js"></script>
+</body>
+</html>
