@@ -47,8 +47,8 @@ public class Cell {
 	}		
 
 	/**
-	 * Returns true if the cell is already mowed
-	 * @return
+	 * Tests if the Cell is mowed  
+	 * @return true if the cell is already mowed
 	 */
 	public boolean isMowed() {
 		return mowed;
@@ -76,16 +76,15 @@ public class Cell {
 	}
 	
 	/**
-	 * Returns true if the cell is locked (contains a mower)
-	 * @return
+	 * Tests if the Cell is locked 
+	 * @return true if the cell is locked (contains a mower)
 	 */
 	public boolean isLocked() {
 		return this.locked;
 	}
 
 	/**
-	 * Returns the Position of the cell
-	 * @return
+	 * @return the Position of the Cell
 	 */
 	public Position getPosition() {
 		return this.position;
@@ -101,9 +100,9 @@ public class Cell {
 	  }
 	
 	/**
-	 * Returns the neighbor Cell on Orientation
+	 * Provides the next Cell
 	 * @param orientation
-	 * @return
+	 * @return the neighbor Cell on Orientation
 	 */
 	public Cell nextCell(Orientation orientation){
 		return neighbors.get(orientation);

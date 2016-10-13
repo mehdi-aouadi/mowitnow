@@ -21,8 +21,8 @@ public class Position {
 	
 	/**
 	 * Position constructor
-	 * @param x
-	 * @param y
+	 * @param x index
+	 * @param y index
 	 */
 	public Position(int x, int y) {
 		super();		
@@ -31,16 +31,14 @@ public class Position {
 	}
 
 	/**
-	 * Returns the horizontal index
-	 * @return
+	 * @return the horizontal index
 	 */
 	public int getX() {
 		return x;
 	}
 
 	/**
-	 * Returns the vertical index
-	 * @return
+	 * @return the vertical index
 	 */
 	public int getY() {
 		return y;

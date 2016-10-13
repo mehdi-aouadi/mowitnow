@@ -57,6 +57,8 @@ public class LoaderTest {
 	}
 	
 	private List<Mower> expectedMowers() {
+		//Create a new clean Lawn (Remove the old mowers)
+		lawn = new Lawn(6, 6);
 	    Mower firstMower = new Mower(0, lawn.cellAt(1, 2), Orientation.N);
 	    LinkedList<Move> moves = new LinkedList<Move>(Arrays.asList(Move.G, Move.A, Move.G, Move.A, 
 	    		Move.G, Move.A, Move.G, Move.A, Move.A));

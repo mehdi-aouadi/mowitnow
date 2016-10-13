@@ -76,8 +76,7 @@ public class Lawn {
 	
 
 	/**
-	 * Returns the lawn width
-	 * @return
+	 * @return the lawn width
 	 */
 	public int getWidth() {
 		return width;
@@ -92,10 +91,10 @@ public class Lawn {
 	}
 	
 	/**
-	 * Return the cell located at X:Y
-	 * @param x
-	 * @param y
-	 * @return
+	 * Provides a Cell according to X:Y indexes 
+	 * @param x index
+	 * @param y index
+	 * @return the cell located at X:Y
 	 */
 	public Cell cellAt(int x, int y) {
 		checkArgument(in(x, y), "The position X:" + x + ", Y:" + y
@@ -104,10 +103,10 @@ public class Lawn {
 	}
 	
 	/**
-	 * Returns TRUE if the x:y is within the Lawn
+	 * Check the position x:y is within the Lawn 
 	 * @param x
 	 * @param y
-	 * @return
+	 * @return TRUE if the x:y is within the Lawn
 	 */
 	private boolean in(int x, int y) {
 	    return (x < width && x >= 0) && (y < height && y >= 0);

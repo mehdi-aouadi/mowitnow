@@ -33,7 +33,7 @@ public class Commander implements Observer{
 	
 	/**
 	 * The commander constructor
-	 * @param lawn
+	 * @param lawn 
 	 * @param mowers
 	 */
 	public Commander(Lawn lawn, List<Mower> mowers) {
